@@ -1,10 +1,10 @@
 文件清单：
 1.programe.txt            输入文件（待分析程序）
 2.grammar.txt             输入文件（语法规则）
-3.main_table.txt		      词法分析结果（主表）
-4.id_table.txt		        词法分析结果（标识符表）
-5.number_table.txt		    词法分析结果（数字表）
-6.twox.txt			          词法分析结果（三元式）
+3.main_table.txt          词法分析结果（主表）
+4.id_table.txt            词法分析结果（标识符表）
+5.number_table.txt        词法分析结果（数字表）
+6.twox.txt                词法分析结果（三元式）
 7.FIRST.txt			          语法分析结果（FIRST集）
 8.FOLLOW.txt		          语法分析结果（FOLLOW集）
 9.SELECT.txt		          语法分析结果（SELECT集）
