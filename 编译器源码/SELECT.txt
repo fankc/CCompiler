@@ -1,0 +1,71 @@
+SELECT(<cin闭包> >> <表达式> <cin闭包>):  >>
+SELECT(<cin闭包> @):  ;
+SELECT(<cout闭包> << <表达式> <cout闭包>):  <<
+SELECT(<cout闭包> @):  ;
+SELECT(<for循环> for ( <赋值函数> ; <逻辑表达式> ; <后缀表达式> ) { <函数块> }):  for
+SELECT(<while循环> while ( <逻辑表达式> ) { <函数块> }):  while
+SELECT(<变量> <标志符> <数组下标>):  id
+SELECT(<标志符> id):  id
+SELECT(<表达式> <因子> <项>):  ( id number
+SELECT(<参数> <标志符>):  id
+SELECT(<参数> <数字>):  number
+SELECT(<参数闭包> , <参数> <参数闭包>):  ,
+SELECT(<参数闭包> @):  )
+SELECT(<参数列表> <参数> <参数闭包>):  id number
+SELECT(<参数声明> <声明> <声明闭包>):  type
+SELECT(<参数声明> @):  )
+SELECT(<多个数据> <数字> <数字闭包>):  number
+SELECT(<否则语句> @):  cin cout for id if return while }
+SELECT(<否则语句> else { <函数块> }):  else
+SELECT(<赋初值> = <右值>):  =
+SELECT(<赋初值> @):  ) , ;
+SELECT(<赋值函数> <变量> <赋值或函数调用>):  id
+SELECT(<赋值函数> cin <cin闭包> ;):  cin
+SELECT(<赋值函数> cout <cout闭包> ;):  cout
+SELECT(<赋值或函数调用> ( <参数列表> ) ;):  (
+SELECT(<赋值或函数调用> = <右值> ;):  =
+SELECT(<函数定义> <类型> <变量> ( <参数声明> ) { <函数块> }):  type
+SELECT(<函数返回> return <因式> ;):  return
+SELECT(<函数块> <声明语句闭包> <函数块闭包>):  cin cout for id if return type while }
+SELECT(<函数块闭包> <for循环> <函数块闭包>):  for
+SELECT(<函数块闭包> <while循环> <函数块闭包>):  while
+SELECT(<函数块闭包> <赋值函数> <函数块闭包>):  cin cout id
+SELECT(<函数块闭包> <函数返回> <函数块闭包>):  return
+SELECT(<函数块闭包> <条件语句> <函数块闭包>):  if
+SELECT(<函数块闭包> @):  }
+SELECT(<后缀表达式> <变量> <后缀运算符>):  id
+SELECT(<后缀运算符> ++):  ++
+SELECT(<后缀运算符> --):  --
+SELECT(<类型> type):  type
+SELECT(<逻辑表达式> <表达式> <逻辑运算符> <表达式>):  ( id number
+SELECT(<逻辑运算符> !=):  !=
+SELECT(<逻辑运算符> <):  <
+SELECT(<逻辑运算符> <=):  <=
+SELECT(<逻辑运算符> ==):  ==
+SELECT(<逻辑运算符> >):  >
+SELECT(<逻辑运算符> >=):  >=
+SELECT(<声明> <类型> <变量> <赋初值>):  type
+SELECT(<声明闭包> , <声明> <声明闭包>):  ,
+SELECT(<声明闭包> @):  )
+SELECT(<声明语句> <声明> ;):  type
+SELECT(<声明语句闭包> <声明语句> <声明语句闭包>):  type
+SELECT(<声明语句闭包> @):  cin cout for id if return while }
+SELECT(<数字> number):  number
+SELECT(<数字闭包> , <数字> <数字闭包>):  ,
+SELECT(<数字闭包> @):  }
+SELECT(<数组下标> @):  != % ( ) * + ++ , - -- / ; < << <= = == > >= >> ]
+SELECT(<数组下标> [ <因式> ]):  [
+SELECT(<条件语句> if ( <逻辑表达式> ) { <函数块> } <否则语句>):  if
+SELECT(<项> + <因子> <项>):  +
+SELECT(<项> - <因子> <项>):  -
+SELECT(<项> @):  != ) , ; < << <= == > >= >>
+SELECT(<因式> ( <表达式> )):  (
+SELECT(<因式> <变量>):  id
+SELECT(<因式> <数字>):  number
+SELECT(<因式递归> % <因式> <因式递归>):  %
+SELECT(<因式递归> * <因式> <因式递归>):  *
+SELECT(<因式递归> / <因式> <因式递归>):  /
+SELECT(<因式递归> @):  != ) + , - ; < << <= == > >= >>
+SELECT(<因子> <因式> <因式递归>):  ( id number
+SELECT(<右值> <表达式>):  ( id number
+SELECT(<右值> { <多个数据> }):  {

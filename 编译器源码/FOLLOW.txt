@@ -1,0 +1,38 @@
+FOLLOW(<cin闭包>):  ;
+FOLLOW(<cout闭包>):  ;
+FOLLOW(<for循环>):  cin cout for id if return while }
+FOLLOW(<while循环>):  cin cout for id if return while }
+FOLLOW(<变量>):  != % ( ) * + ++ , - -- / ; < << <= = == > >= >> ]
+FOLLOW(<标志符>):  != % ( ) * + ++ , - -- / ; < << <= = == > >= >> [ ]
+FOLLOW(<表达式>):  != ) , ; < << <= == > >= >>
+FOLLOW(<参数>):  ) ,
+FOLLOW(<参数闭包>):  )
+FOLLOW(<参数列表>):  )
+FOLLOW(<参数声明>):  )
+FOLLOW(<多个数据>):  }
+FOLLOW(<否则语句>):  cin cout for id if return while }
+FOLLOW(<赋初值>):  ) , ;
+FOLLOW(<赋值函数>):  ; cin cout for id if return while }
+FOLLOW(<赋值或函数调用>):  ; cin cout for id if return while }
+FOLLOW(<函数定义>):  #
+FOLLOW(<函数返回>):  cin cout for id if return while }
+FOLLOW(<函数块>):  }
+FOLLOW(<函数块闭包>):  }
+FOLLOW(<后缀表达式>):  )
+FOLLOW(<后缀运算符>):  )
+FOLLOW(<类型>):  id
+FOLLOW(<逻辑表达式>):  ) ;
+FOLLOW(<逻辑运算符>):  ( id number
+FOLLOW(<声明>):  ) , ;
+FOLLOW(<声明闭包>):  )
+FOLLOW(<声明语句>):  cin cout for id if return type while }
+FOLLOW(<声明语句闭包>):  cin cout for id if return while }
+FOLLOW(<数字>):  != % ) * + , - / ; < << <= == > >= >> ] }
+FOLLOW(<数字闭包>):  }
+FOLLOW(<数组下标>):  != % ( ) * + ++ , - -- / ; < << <= = == > >= >> ]
+FOLLOW(<条件语句>):  cin cout for id if return while }
+FOLLOW(<项>):  != ) , ; < << <= == > >= >>
+FOLLOW(<因式>):  != % ) * + , - / ; < << <= == > >= >> ]
+FOLLOW(<因式递归>):  != ) + , - ; < << <= == > >= >>
+FOLLOW(<因子>):  != ) + , - ; < << <= == > >= >>
+FOLLOW(<右值>):  ) , ;
